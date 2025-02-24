@@ -19,32 +19,34 @@ public class Gun : MonoBehaviour
     {
         playerController = GetComponentInParent<PlayerController>();
         activeWeapon = GetComponentInParent<ActiveWeapon>();
+        mySpriteRender = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
         MouseFollowWithOffset();
-         HandleShooting();
+        HandleShooting();
     }
     private void MouseFollowWithOffset()
     {
-        Vector3 mousePos = Input.mousePosition;
-        Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(playerController.transform.position);
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 direction = mousePos - playerController.transform.position; // Hướng từ player đến chuột
 
-        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        if (mousePos.x < playerScreenPoint.x)
+        if (mousePos.x < playerController.transform.position.x)
         {
-            activeWeapon.transform.rotation = Quaternion.Euler(0, -180, angle);
+            activeWeapon.transform.rotation = Quaternion.Euler(0, 0, angle);
+            mySpriteRender.flipY = true;
         }
         else
         {
             activeWeapon.transform.rotation = Quaternion.Euler(0, 0, angle);
+            mySpriteRender.flipY = false;
         }
     }
-
- private void HandleShooting()
+    private void HandleShooting()
     {
         if (Input.GetMouseButtonDown(0)) // Chuột trái
         {
