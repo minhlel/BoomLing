@@ -44,14 +44,31 @@ public class PlayerController : MonoBehaviour
         rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
     }
 
+    // private void AdjustPlayerFacingDirection() {
+    //     Vector3 mousePos = Input.mousePosition;
+    //     Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
+
+    //     if (mousePos.x < playerScreenPoint.x) {
+    //         mySpriteRender.flipX = true;
+    //     } else {
+    //         mySpriteRender.flipX = false;
+    //     }
+    // }
+
+    // Các biến khác như cũ...
+    public bool IsFacingLeft { get; private set; } // Biến công khai để kiểm tra hướng nhân vật
+
     private void AdjustPlayerFacingDirection() {
         Vector3 mousePos = Input.mousePosition;
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
 
         if (mousePos.x < playerScreenPoint.x) {
             mySpriteRender.flipX = true;
+            IsFacingLeft = true; // Cập nhật hướng
         } else {
             mySpriteRender.flipX = false;
+            IsFacingLeft = false; // Cập nhật hướng
         }
     }
+
 }
