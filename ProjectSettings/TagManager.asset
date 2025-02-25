@@ -3,19 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - Enemy
-  - Wall
-=======
-  - BlueNPC
-  - Boss
->>>>>>> 410ae5a87c7479da487e4e1e440590b54f95895b
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Camera
+  - 
   - Water
   - UI
   - 
@@ -47,10 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 3153305551
-    locked: 0
-  - name: Player
-    uniqueID: 2040432591
     locked: 0
