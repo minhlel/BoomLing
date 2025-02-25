@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - BlueNPC
+  - Boss
+  - Wall
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -49,4 +53,10 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 2626556271
+    locked: 0
+  - name: Weapon
+    uniqueID: 1276476851
     locked: 0
