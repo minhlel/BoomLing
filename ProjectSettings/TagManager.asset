@@ -51,11 +51,17 @@ TagManager:
   - name: Rock
     uniqueID: 2106851259
     locked: 0
-  - name: Default
-    uniqueID: 0
+  - name: Enemy
+    uniqueID: 3091397637
     locked: 0
   - name: Player
     uniqueID: 2626556271
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Bullet
+    uniqueID: 3089072715
     locked: 0
   - name: Weapon
     uniqueID: 1276476851
