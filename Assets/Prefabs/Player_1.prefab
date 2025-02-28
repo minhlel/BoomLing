@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -1917603623, guid: 018656f65f856574384862ed523431a1, type: 3}
+  m_Sprite: {fileID: 198043617, guid: 7e8c222a6328eba4fa1126e60ced105b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -182,8 +182,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.32774687, y: -0.9413271}
-  m_Size: {x: 0.51477146, y: 0.67843056}
+  m_Offset: {x: -0.10941219, y: 0.1024704}
+  m_Size: {x: 0.58203125, y: 1.4477177}
   m_Direction: 0
 --- !u!1 &4577943088756719532
 GameObject:
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2278528106306719691, guid: a029f3368880a734aa3405ec7d87125e, type: 3}
   firePoint: {fileID: 6801710994628965689}
-  bulletSpeed: 20
+  bulletSpeed: 30
 --- !u!1 &4591098347120259794
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +391,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3385404842520470540, guid: a029f3368880a734aa3405ec7d87125e, type: 3}
       propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3385404842520470540, guid: a029f3368880a734aa3405ec7d87125e, type: 3}
+      propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6837404311394267337, guid: a029f3368880a734aa3405ec7d87125e, type: 3}
