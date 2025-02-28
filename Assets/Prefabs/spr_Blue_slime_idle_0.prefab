@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6025909319923809175}
   m_Layer: 0
   m_Name: spr_Blue_slime_idle_0
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,8 +77,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 871624420, guid: b2ee6f40932f991489b170bcb8f27f65, type: 3}
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 996926917, guid: 6ff28e6acdb2cc2448b3df218100348f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,8 +121,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.022480011, y: -0.067439675}
-  m_Size: {x: 1.1675196, y: 1.1675196}
+  m_Offset: {x: -0.15721464, y: -0.22467256}
+  m_Size: {x: 0.5385866, y: 1.7515283}
   m_Direction: 0
 --- !u!50 &8095754238237089726
 Rigidbody2D:
