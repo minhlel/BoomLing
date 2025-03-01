@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2146d1ed375a2f844aa0c3fc6a673ae7
+guid: 0198743a23937404c9cf42cee5bdbb56
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 18
+  spritePixelsToUnits: 25
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dude_Monster_Idle_4_0
+      name: Run_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 38
         y: 0
-        width: 17
-        height: 26
+        width: 39
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9418283ac3ab32348bf1cc0e6227763e
-      internalID: 206344015
+      spriteID: 5021d0bfb55750e40a3cb422148194d3
+      internalID: -1375926901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dude_Monster_Idle_4_1
+      name: Run_1
       rect:
         serializedVersion: 2
-        x: 39
+        x: 165
         y: 0
-        width: 17
-        height: 27
+        width: 42
+        height: 68
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24bc8c32ad266e24d981967843a21e67
-      internalID: 1163029453
+      spriteID: b957cb08a346a444c91036fd5de66ecb
+      internalID: 165700684
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dude_Monster_Idle_4_2
+      name: Run_2
       rect:
         serializedVersion: 2
-        x: 70
-        y: 0
-        width: 18
-        height: 27
+        x: 282
+        y: 5
+        width: 54
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef8cb75568fc1a94daa544c69a75139f
-      internalID: -1293172544
+      spriteID: e33ae13d712d23243a65022d360cfa5b
+      internalID: 931541925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dude_Monster_Idle_4_3
+      name: Run_3
       rect:
         serializedVersion: 2
-        x: 101
+        x: 412
         y: 0
-        width: 20
-        height: 26
+        width: 49
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +187,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 180e2bbcf72b8a24ea6181a5d46ac82a
-      internalID: -2076984999
+      spriteID: a1653c38555b9de4384b8b4211afb9e0
+      internalID: -433822871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_4
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 0
+        width: 38
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388d19d41a0bfa34eaa6a2abcf21ae09
+      internalID: 2035048988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_5
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 0
+        width: 36
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95ae9bad278f5246b74d6daff4dbabf
+      internalID: -692837965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_6
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 0
+        width: 41
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438c08d471847e341bf2087e678a1820
+      internalID: -1144097640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_7
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 5
+        width: 52
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb559438633bd2c4ab74b2295094ef6d
+      internalID: 407358253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_8
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 2
+        width: 50
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c3982c8dad53d4bab78d4c64615d5b
+      internalID: 1908539699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_9
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 0
+        width: 36
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32794a615b556c74a8c72c1f1334a218
+      internalID: -998070287
       vertices: []
       indices: 
       edges: []
@@ -204,10 +330,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dude_Monster_Idle_4_0: 206344015
-      Dude_Monster_Idle_4_1: 1163029453
-      Dude_Monster_Idle_4_2: -1293172544
-      Dude_Monster_Idle_4_3: -2076984999
+      Run_0: -1375926901
+      Run_1: 165700684
+      Run_2: 931541925
+      Run_3: -433822871
+      Run_4: 2035048988
+      Run_5: -692837965
+      Run_6: -1144097640
+      Run_7: 407358253
+      Run_8: 1908539699
+      Run_9: -998070287
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
