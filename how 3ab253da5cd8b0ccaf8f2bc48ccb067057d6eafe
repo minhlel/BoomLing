@@ -1,0 +1,216 @@
+[33mcommit 3ab253da5cd8b0ccaf8f2bc48ccb067057d6eafe[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mDBK[m[33m, [m[1;31morigin/DBK[m[33m)[m
+Author: DaoBaoKha <daobaokha2509@gmail.com>
+Date:   Sat Mar 1 23:41:57 2025 +0700
+
+    UpdateBackground
+
+[33mcommit 4caba0a1fabb5bf8dc753f52d8bac33be155d4d4[m
+Merge: f0eaa1f a078b54
+Author: Brian <hoangtronghuy.KT@gmail.com>
+Date:   Fri Feb 28 12:22:51 2025 +0700
+
+    Merge branch 'main' of https://github.com/minhlel/BoomLing
+
+[33mcommit f0eaa1f36e4f2e070b77268ab6b485095f0884b8[m
+Author: Brian <hoangtronghuy.KT@gmail.com>
+Date:   Fri Feb 28 12:20:20 2025 +0700
+
+    done entry and create boss
+
+[33mcommit a078b543d544c0ffc4e55b75e63d20ac79a7e900[m
+Merge: 4855a1c c10239b
+Author: DaoBaoKha <daobaokha2509@gmail.com>
+Date:   Thu Feb 27 14:13:10 2025 +0700
+
+    Merge pull request #6 from minhlel/DBK
+    
+    UpdateScene
+
+[33mcommit c10239b031c7bfe814e990f8e917e30ebbea7b85[m
+Author: DaoBaoKha <daobaokha2509@gmail.com>
+Date:   Thu Feb 27 14:09:23 2025 +0700
+
+    UpdateScene
+
+[33mcommit 4855a1cf03cd2a98f0de2d17f64652a1555e10a7[m[33m ([m[1;32mDaoBaoKha[m[33m)[m
+Merge: 0202924 e9913bd
+Author: DaoBaoKha <daobaokha2509@gmail.com>
+Date:   Thu Feb 27 01:17:59 2025 +0700
+
+    Merge pull request #5 from minhlel/DaoBaoKha
+    
+    RedoBackground
+
+[33mcommit e9913bd2c24780ebcae8dc43a3ab8ff9bf3d87a1[m[33m ([m[1;31morigin/DaoBaoKha[m[33m)[m
+Author: DaoBaoKha <khadbse183221@fpt.edu.vn>
+Date:   Thu Feb 27 01:13:37 2025 +0700
+
+    RedoBackground
+
+[33mcommit 72881998db4b5617ea60d060aa5eb8c7b7e945da[m
+Merge: 5142ef8 0202924
+Author: Brian <hoangtronghuy.KT@gmail.com>
+Date:   Wed Feb 26 16:51:30 2025 +0700
+
+    Resolved conflicts in Player_1.prefab and NguyenHP.unity
+
+[33mcommit 5142ef8e00b8d1edc3f3ab0062ab2394695a71e3[m
+Author: Brian <hoangtronghuy.KT@gmail.com>
+Date:   Wed Feb 26 16:45:54 2025 +0700
+
+    conmmit
+
+[33mcommit 0202924abd69852cc8d4a395aa07966b24e19ded[m
+Author: Brian0o0 <nguyenhpse160876@fpt.edu.vn>
+Date:   Wed Feb 26 16:39:15 2025 +0700
+
+    entry scene
+
+[33mcommit 170e4188bbe5a3a2520929fa73c593157239d127[m
+Merge: 092526d 86e5696
+Author: Brian0o0 <nguyenhpse160876@fpt.edu.vn>
+Date:   Tue Feb 25 15:41:15 2025 +0700
+
+    merge ThanhLHH to main
+
+[33mcommit 092526dc9d08140e1fcaa3fb9f38475c09db1bba[m
+Merge: 7f9ee77 c9b1fae
+Author: Brian0o0 <nguyenhpse160876@fpt.edu.vn>
+Date:   Tue Feb 25 15:32:45 2025 +0700
+
+    Cập nhật TagManager.asset
+
+[33mcommit 7f9ee77dc18f423b9954dac56444b3e073679191[m
+Author: Brian0o0 <nguyenhpse160876@fpt.edu.vn>
+Date:   Tue Feb 25 15:26:50 2025 +0700
+
+    Cập nhật TagManager.asset
+
+[33mcommit 86e56967c84df41288808b4b5f505f057a8ef8ae[m[33m ([m[1;31morigin/ThanhLHH[m[33m)[m
+Merge: 70fdbb4 c9b1fae
+Author: Hoàng Thành <hoangthanh5264@gmail.com>
+Date:   Tue Feb 25 13:28:29 2025 +0700
+
+    Add Sword
+
+[33mcommit 70fdbb45b4ead9f0af442f215cc7df3fafc7d147[m
+Author: Hoàng Thành <hoangthanh5264@gmail.com>
+Date:   Mon Feb 24 22:16:56 2025 +0700
+
+    add sample character and enermy
+
+[33mcommit c9b1faebb079144392fd1dd513dfe637c27548ff[m
+Merge: 1ddc8f1 75078df
+Author: Brian <hoangtronghuy.KT@gmail.com>
+Date:   Mon Feb 24 17:08:56 2025 +0700
+
+    Merge branch 'duc'
+
+[33mcommit 1ddc8f18defaff167ea55d3b6c2a31c128e58cdc[m
+Author: Brian <hoangtronghuy.KT@gmail.com>
+Date:   Mon Feb 24 17:06:13 2025 +0700
+
+    fig gun
+
+[33mcommit 75078dfb8cc6f83f41e8c13960849ceda34d7637[m[33m ([m[1;31morigin/duc[m[33m)[m
+Author: Tran Minh Duc <155726158+MinhhDucc9@users.noreply.github.com>
+Date:   Mon Feb 24 14:18:08 2025 +0700
+
+    add lava map
+
+[33mcommit 4725aca9ec507432030fffbb2ea4bad08e0ef1ab[m
+Merge: b4807f8 8711aa2
+Author: Brian <hoangtronghuy.KT@gmail.com>
+Date:   Sun Feb 23 16:06:43 2025 +0700
+
+    merge code
+
+[33mcommit b4807f8dbdbcdaa12f5d5fd67216bbc81e16a596[m
+Author: Brian <hoangtronghuy.KT@gmail.com>
+Date:   Sun Feb 23 15:59:35 2025 +0700
+
+    Lưu thay đổi trước khi chuyển nhánh
+
+[33mcommit 8711aa2db966e538e2958234175ffc2984cac886[m
+Author: Hoàng Thành <hoangthanh5264@gmail.com>
+Date:   Sun Feb 23 12:48:32 2025 +0700
+
+    Add Thanh scene
+
+[33mcommit 39dcc0aef74d558d542483769eac821b686dda21[m
+Merge: 41ca824 410ae5a
+Author: Brian <hoangtronghuy.KT@gmail.com>
+Date:   Sat Feb 22 23:18:31 2025 +0700
+
+    fix conflic
+
+[33mcommit 41ca824a7b3e89e7f7630fc757233e970b3170bb[m[33m ([m[1;31morigin/NguyenHP[m[33m)[m
+Author: Brian <hoangtronghuy.KT@gmail.com>
+Date:   Sat Feb 22 23:07:21 2025 +0700
+
+    gun
+
+[33mcommit 410ae5a87c7479da487e4e1e440590b54f95895b[m
+Author: DaoBaoKha <daobaokha2509@gmail.com>
+Date:   Fri Feb 21 16:55:44 2025 +0700
+
+    DBK
+
+[33mcommit 7c2643c3aa964f109697808b064147db7928a503[m
+Author: Brian <hoangtronghuy.KT@gmail.com>
+Date:   Fri Feb 21 14:48:49 2025 +0700
+
+    weapon
+
+[33mcommit 57954522d3eb5c5649a3483fff251d80adde1d64[m
+Merge: a830d8b e0b36ac
+Author: Brian <hoangtronghuy.KT@gmail.com>
+Date:   Mon Feb 17 16:07:20 2025 +0700
+
+    Merge branch 'main' of origin into local main
+
+[33mcommit a830d8b92c808b63942848fa03b879a741f64f34[m
+Merge: a0ee989 edd91ba
+Author: Brian <hoangtronghuy.KT@gmail.com>
+Date:   Mon Feb 17 16:04:19 2025 +0700
+
+    rule tile and tile map
+
+[33mcommit e0b36ac41799442153071f918fbf9dc8d784a068[m
+Merge: 038fc61 edd91ba
+Author: Brian0o0 <147176464+Brian0o0@users.noreply.github.com>
+Date:   Sat Feb 15 21:43:19 2025 +0700
+
+    Merge pull request #1 from minhlel/AddMovement
+    
+    AddMovement
+
+[33mcommit a0ee9896eae3b99f2503cd259486255ee3860c57[m
+Author: Brian <hoangtronghuy.KT@gmail.com>
+Date:   Sat Feb 15 21:42:16 2025 +0700
+
+    Save local changes before merge
+
+[33mcommit 038fc61d0d5bcbd5da7f729e89d80b3086b378d0[m
+Author: Brian <hoangtronghuy.KT@gmail.com>
+Date:   Sat Feb 15 21:31:56 2025 +0700
+
+    tile map
+
+[33mcommit edd91bae78bb052b7ad4ba2e0f8f4cdaff1ed3ea[m[33m ([m[1;31morigin/AddMovement[m[33m)[m
+Author: DaoBaoKha <daobaokha2509@gmail.com>
+Date:   Sat Feb 15 21:28:28 2025 +0700
+
+    AddMovement
+
+[33mcommit e362b664551de8e95e746813ded4710dca6f6cf6[m
+Author: minhlel <155430170+minhlel@users.noreply.github.com>
+Date:   Wed Feb 12 21:15:35 2025 +0700
+
+    innitialcommit
+
+[33mcommit cb6e2687082dac4f4cec02f4eefcf4472783b457[m
+Author: minhlel <155430170+minhlel@users.noreply.github.com>
+Date:   Wed Feb 12 21:05:39 2025 +0700
+
+    Initial commit
