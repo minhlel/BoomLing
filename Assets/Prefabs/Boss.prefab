@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 6919118441519726283}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.75, y: 0.06, z: 0}
+  m_LocalPosition: {x: 2.3, y: 0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45,9 +45,11 @@ GameObject:
   - component: {fileID: 5463237494168540280}
   - component: {fileID: 3801994689268242651}
   - component: {fileID: 7700364868969896251}
+  - component: {fileID: 6321387254321750572}
+  - component: {fileID: -1533764370631813928}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,8 +202,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.69311726, y: -0.9807588}
-  m_Size: {x: 0.8076856, y: 0.8076856}
+  m_Offset: {x: -0.69311726, y: -0.15844226}
+  m_Size: {x: 0.8076856, y: 2.4523187}
   m_Direction: 0
 --- !u!114 &7700364868969896251
 MonoBehaviour:
@@ -220,9 +222,36 @@ MonoBehaviour:
   firePoint: {fileID: 4824818248335944454}
   bulletSpeed: 20
   bombForce: 10
-  actionInterval: 0.5
-  switchActionTime: 5
+  actionInterval: 0.7
+  switchActionTime: 0.000001
   moveSpeed: 2
   moveAreaMin: {x: 2, y: -9}
   moveAreaMax: {x: 14, y: -3}
   rotateChance: 0
+--- !u!114 &6321387254321750572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7813543478524295494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c425bcd438c4a442ae67e3beba8f34c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whiteFlashMat: {fileID: 2100000, guid: 17f4c3cec850d99448d7fadab0c7c239, type: 2}
+  restoreDefaultMatTime: 0.2
+--- !u!114 &-1533764370631813928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7813543478524295494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e82aff21215e554abd1dd904c74069b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 200

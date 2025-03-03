@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2079724259600886446}
   - component: {fileID: 4076607907513645810}
   - component: {fileID: 9084487353062461675}
-  - component: {fileID: 5597586649470349613}
+  - component: {fileID: 7233732677408855309}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -146,20 +146,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.009444714, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.08}
+    oldSize: {x: 0.5, y: 0.13333334}
     newSize: {x: 0.057692308, y: 0.07692308}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.08}
+  m_Size: {x: 0.48258114, y: 0.13036728}
   m_EdgeRadius: 0
---- !u!114 &5597586649470349613
+--- !u!114 &7233732677408855309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,7 +168,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1319164939820915374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e89bc42a0112c4042b103a8b69ccfd09, type: 3}
+  m_Script: {fileID: 11500000, guid: 44b17126cfe8d5745a0b36cb247d4499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 152291199243224806, guid: bae1de0ff86cdd840aa2f187ecc3e77e, type: 3}
+  damageAmount: 5

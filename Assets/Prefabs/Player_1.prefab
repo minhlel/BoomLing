@@ -14,9 +14,11 @@ GameObject:
   - component: {fileID: 1507143819492183165}
   - component: {fileID: 6364886403433237196}
   - component: {fileID: 6912324408876179401}
+  - component: {fileID: 6086061356715113775}
+  - component: {fileID: 215879465948583645}
   m_Layer: 0
   m_Name: Player_1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,6 +187,33 @@ CapsuleCollider2D:
   m_Offset: {x: -0.10941219, y: 0.1024704}
   m_Size: {x: 0.58203125, y: 1.4477177}
   m_Direction: 0
+--- !u!114 &6086061356715113775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3471289589376316786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e82aff21215e554abd1dd904c74069b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+--- !u!114 &215879465948583645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3471289589376316786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c425bcd438c4a442ae67e3beba8f34c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whiteFlashMat: {fileID: 2100000, guid: 09efc46e571bc0145ac4f9e313f44f90, type: 2}
+  restoreDefaultMatTime: 0.2
 --- !u!1 &4577943088756719532
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2278528106306719691, guid: a029f3368880a734aa3405ec7d87125e, type: 3}
   firePoint: {fileID: 6801710994628965689}
-  bulletSpeed: 30
+  bulletSpeed: 50
 --- !u!1 &4591098347120259794
 GameObject:
   m_ObjectHideFlags: 0

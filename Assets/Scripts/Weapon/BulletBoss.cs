@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class BulletBoss : MonoBehaviour
 {
     [SerializeField] private GameObject explosionEffect; // Hiệu ứng nổ
     [SerializeField] private int damageAmount = 1;
     private void OnTriggerEnter2D(Collider2D collider2D)
     {
         // Kiểm tra va chạm với enemy hoặc wall
-        if (collider2D.gameObject.CompareTag("Enemy") || collider2D.gameObject.CompareTag("Boss"))
+        if (collider2D.gameObject.CompareTag("Player"))
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
-            EnemyHealth enemyHealth = collider2D.gameObject.GetComponent<EnemyHealth>();
-            if (enemyHealth != null)
+            PlayerHealth playerHealth = collider2D.gameObject.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
             {
-                enemyHealth.TakeDamage(damageAmount);
+                playerHealth.TakeDamage(damageAmount);
             }
         }
         else if (collider2D.gameObject.CompareTag("Wall"))

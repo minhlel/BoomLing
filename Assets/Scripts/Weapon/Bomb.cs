@@ -5,16 +5,20 @@ using UnityEngine;
 public class Bomb : MonoBehaviour
 {
     [SerializeField] private GameObject explosionEffect; // Hiệu ứng nổ
+    [SerializeField] private int damageAmount = 15;
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        // Kiểm tra va chạm với enemy hoặc wall
+        if (collision.gameObject.CompareTag("Player"))
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
-            // Gây sát thương cho enemy (thêm logic tuỳ ý)
-            Destroy(collision.gameObject); // Huỷ enemy
-            Destroy(gameObject);
-            // Tạo hiệu ứng nổ
+            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damageAmount);
+            }
         }
         else if (collision.gameObject.CompareTag("Wall"))
         {
@@ -22,8 +26,7 @@ public class Bomb : MonoBehaviour
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
-
-        // Huỷ bom sau khi va chạm
+        // Huỷ viên đạn
         Destroy(gameObject);
     }
 }
