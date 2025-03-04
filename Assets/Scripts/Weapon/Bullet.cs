@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider2D)
     {
         // Kiểm tra va chạm với enemy hoặc wall
-        if (collider2D.gameObject.CompareTag("Enemy"))
+        if (collider2D.gameObject.CompareTag("Enemy") || collider2D.gameObject.CompareTag("Boss"))
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
             // Gây sát thương cho enemy (thêm logic tuỳ ý)

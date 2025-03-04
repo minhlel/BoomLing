@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 7700364868969896251}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,8 +200,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.69311726, y: -0.9807588}
-  m_Size: {x: 0.8076856, y: 0.8076856}
+  m_Offset: {x: -0.69311726, y: -0.3561344}
+  m_Size: {x: 0.8076856, y: 2.0569344}
   m_Direction: 0
 --- !u!114 &7700364868969896251
 MonoBehaviour:
