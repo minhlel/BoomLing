@@ -28,9 +28,10 @@ public class BotController : MonoBehaviour
 
     private float actionTimer = 0f;                  // Bộ đếm thời gian cho hành động
     private bool isShooting = true;                  // Trạng thái hành động hiện tại (bắn hoặc ném)
-
+    private Transform bossPosition;
     private void Start()
     {
+        bossPosition = GetComponent<Transform>();
         // Lặp lại hành động ngẫu nhiên
         InvokeRepeating(nameof(RandomAction), actionInterval, actionInterval);
 
@@ -110,24 +111,23 @@ public class BotController : MonoBehaviour
 
         Vector3 firePointScale = firePoint.localPosition;
         firePointScale.x = isFacingRight ? Mathf.Abs(firePointScale.x) : -Mathf.Abs(firePointScale.x);
-        firePoint.localPosition = firePointScale;
+        firePoint.localScale = firePointScale;
+
+        // Nếu firePoint cần di chuyển để phù hợp với góc nhìn, điều chỉnh vị trí của nó
+        Vector3 spawnPosition = firePoint.position;
+        if (isFacingRight)
+        {
+            // Đổi vị trí x của firePoint sang đối xứng
+            spawnPosition.x = bossPosition.transform.position.x - (firePoint.position.x - bossPosition.transform.position.x);
+        }
     }
 
     private void ShootBullet()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        if (bullet != null)
-        {
-            Debug.Log("Bullet created: " + bullet.name); // Ghi log tên của đối tượng bullet
-        }
-        else
-        {
-            Debug.LogWarning("Bullet creation failed!"); // Báo động nếu đối tượng không được tạo
-        }
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            Debug.Log(bullet);
             rb.velocity = (isFacingRight ? firePoint.right : -firePoint.right) * bulletSpeed;
         }
         //Destroy(bullet, 2f);
