@@ -58,7 +58,6 @@ public class PlayerController : Singleton<PlayerController>
         movement = playerControls.Movement.Move.ReadValue<Vector2>();
         bool isShooting = Input.GetMouseButton(0); // Nhấn chuột trái để bắn
         myAnimator.SetBool("shoot", isShooting ? true : false); 
-
         myAnimator.SetFloat("moveX", movement.x);
         myAnimator.SetFloat("moveY", movement.y);
     }
