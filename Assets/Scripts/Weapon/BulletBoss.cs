@@ -17,14 +17,15 @@ public class BulletBoss : MonoBehaviour
             {
                 playerHealth.TakeDamage(damageAmount);
             }
+            Destroy(gameObject);
         }
         else if (collider2D.gameObject.CompareTag("Wall"))
         {
-            // Tạo hiệu ứng nổ khi đạn va vào tường
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            // Tạo hiệu ứng nổ khi đạn va vào tường
             Destroy(gameObject);
         }
         // Huỷ viên đạn
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }

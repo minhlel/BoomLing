@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int startingHealth = 3;
+    //[SerializeField] private HealthBar healthBar;
 
     private int currentHealth;
     private Flash flash;
+    private Animator myAnimator;
+
     private void Awake()
     {
+        myAnimator = GetComponent<Animator>();
         flash = GetComponent<Flash>();
     }
     private void Start()
@@ -20,7 +25,7 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Debug.Log(currentHealth);
+        //Debug.Log(currentHealth);
         StartCoroutine(flash.FlashRoutine());
     }
 
@@ -28,9 +33,12 @@ public class EnemyHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            Debug.Log("die");
-            Destroy(gameObject);
+            myAnimator.SetBool("Death", true);
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.deathEnemy);
         }
+    }
+    public void DestroyBot(){
+        Destroy(gameObject);
     }
 
 }
