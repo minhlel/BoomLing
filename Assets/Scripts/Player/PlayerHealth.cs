@@ -33,25 +33,26 @@ public class PlayerHealth : Singleton<PlayerHealth>
     {
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
+            bool isDeath = CheckIfPlayerDeath();
+            if (isDeath)
+            {
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.deathPlayer);
+                myAnimator.SetBool("isDeath", isDeath ? true : false);
+            }
         }
     }
-    public async void TakeDamage(int damageAmount)
+    public void DestroyPlaeyer()
+    {
+        Destroy(gameObject);
+    }
+    public void TakeDamage(int damageAmount)
     {
         canTakeDamage = false;
         currentHealth -= damageAmount;
         Debug.Log(currentHealth);
-        bool isDeath = PlayerHealth.Instance.CheckIfPlayerDeath();
-        if (isDeath)
-        {
-            Debug.Log("test");
-            myAnimator.SetBool("death", isDeath ? true : false);
-            await Task.Delay(2000);
-        }
+        UpdateHealthSlider();
         StartCoroutine(flash.FlashRoutine());
         StartCoroutine(DamageRecoveryRoutine());
-        CheckIfPlayerDeath();
-        UpdateHealthSlider();
     }
     public Boolean CheckIfPlayerDeath()
     {

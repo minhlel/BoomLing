@@ -65,7 +65,7 @@ private void Shoot()
     // Tính vị trí chuột trong không gian thế giới
     Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     mousePos.z = 0; // Đặt z = 0 vì game 2D chỉ cần trục x, y
-
+    AudioManager.Instance.PlaySFX(AudioManager.Instance.gunPlayer);
     // Tính hướng từ firePoint đến vị trí chuột
     Vector3 direction = (mousePos - firePoint.position).normalized;
 

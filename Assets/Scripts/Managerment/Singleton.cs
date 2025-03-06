@@ -11,8 +11,8 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
         {
             if (instance == null)
             {
-                Debug.LogError($"Singleton {typeof(T)} chưa được khởi tạo!");
-            }
+                //Debug.LogError($"Singleton {typeof(T)} chưa được khởi tạo!");
+            }           
             return instance;
         }
     }

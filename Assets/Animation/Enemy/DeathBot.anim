@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Death
+  m_Name: DeathBot
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,23 +21,23 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 667084930, guid: 8a2f6caba4d450e4e9799678a70d76ac, type: 3}
-    - time: 0.35
-      value: {fileID: -1457389521, guid: 8a2f6caba4d450e4e9799678a70d76ac, type: 3}
-    - time: 0.73333335
-      value: {fileID: 1176520382, guid: 8a2f6caba4d450e4e9799678a70d76ac, type: 3}
+      value: {fileID: -1437964624, guid: bbcc90424924ac54ba45e5be8f929aeb, type: 3}
+    - time: 0.16666667
+      value: {fileID: -491758637, guid: bbcc90424924ac54ba45e5be8f929aeb, type: 3}
+    - time: 0.33333334
+      value: {fileID: 219966292, guid: bbcc90424924ac54ba45e5be8f929aeb, type: 3}
+    - time: 0.48333332
+      value: {fileID: -1825599395, guid: bbcc90424924ac54ba45e5be8f929aeb, type: 3}
+    - time: 0.65
+      value: {fileID: -751967136, guid: bbcc90424924ac54ba45e5be8f929aeb, type: 3}
+    - time: 0.8
+      value: {fileID: -751967136, guid: bbcc90424924ac54ba45e5be8f929aeb, type: 3}
+    - time: 0.95
+      value: {fileID: -751967136, guid: bbcc90424924ac54ba45e5be8f929aeb, type: 3}
     - time: 1.1
-      value: {fileID: -82082454, guid: 8a2f6caba4d450e4e9799678a70d76ac, type: 3}
-    - time: 1.4833333
-      value: {fileID: -24580585, guid: 8a2f6caba4d450e4e9799678a70d76ac, type: 3}
-    - time: 1.8333334
-      value: {fileID: -24580585, guid: 8a2f6caba4d450e4e9799678a70d76ac, type: 3}
-    - time: 2.1833334
-      value: {fileID: -24580585, guid: 8a2f6caba4d450e4e9799678a70d76ac, type: 3}
-    - time: 2.5666666
-      value: {fileID: -24580585, guid: 8a2f6caba4d450e4e9799678a70d76ac, type: 3}
-    - time: 3
-      value: {fileID: -24580585, guid: 8a2f6caba4d450e4e9799678a70d76ac, type: 3}
+      value: {fileID: -751967136, guid: bbcc90424924ac54ba45e5be8f929aeb, type: 3}
+    - time: 1.2666667
+      value: {fileID: -751967136, guid: bbcc90424924ac54ba45e5be8f929aeb, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -60,21 +60,21 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 667084930, guid: 8a2f6caba4d450e4e9799678a70d76ac, type: 3}
-    - {fileID: -1457389521, guid: 8a2f6caba4d450e4e9799678a70d76ac, type: 3}
-    - {fileID: 1176520382, guid: 8a2f6caba4d450e4e9799678a70d76ac, type: 3}
-    - {fileID: -82082454, guid: 8a2f6caba4d450e4e9799678a70d76ac, type: 3}
-    - {fileID: -24580585, guid: 8a2f6caba4d450e4e9799678a70d76ac, type: 3}
-    - {fileID: -24580585, guid: 8a2f6caba4d450e4e9799678a70d76ac, type: 3}
-    - {fileID: -24580585, guid: 8a2f6caba4d450e4e9799678a70d76ac, type: 3}
-    - {fileID: -24580585, guid: 8a2f6caba4d450e4e9799678a70d76ac, type: 3}
-    - {fileID: -24580585, guid: 8a2f6caba4d450e4e9799678a70d76ac, type: 3}
+    - {fileID: -1437964624, guid: bbcc90424924ac54ba45e5be8f929aeb, type: 3}
+    - {fileID: -491758637, guid: bbcc90424924ac54ba45e5be8f929aeb, type: 3}
+    - {fileID: 219966292, guid: bbcc90424924ac54ba45e5be8f929aeb, type: 3}
+    - {fileID: -1825599395, guid: bbcc90424924ac54ba45e5be8f929aeb, type: 3}
+    - {fileID: -751967136, guid: bbcc90424924ac54ba45e5be8f929aeb, type: 3}
+    - {fileID: -751967136, guid: bbcc90424924ac54ba45e5be8f929aeb, type: 3}
+    - {fileID: -751967136, guid: bbcc90424924ac54ba45e5be8f929aeb, type: 3}
+    - {fileID: -751967136, guid: bbcc90424924ac54ba45e5be8f929aeb, type: 3}
+    - {fileID: -751967136, guid: bbcc90424924ac54ba45e5be8f929aeb, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 3.0166667
+    m_StopTime: 1.2833333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -94,8 +94,8 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 3
-    functionName: DestroyPlaeyer
+  - time: 1.2666667
+    functionName: DestroyBot
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
