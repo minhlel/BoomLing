@@ -7,11 +7,12 @@ using UnityEngine.UI;
 
 public class PlayerHealth : Singleton<PlayerHealth>
 {
-    [SerializeField] private int maxHealth = 3;
+    [SerializeField] public int maxHealth = 3;
     [SerializeField] private float damageRecoveryTime = 1f;
 
+    [SerializeField] private ButtonManager buttonManager;
     private Slider healthSlider;
-    private int currentHealth;
+    public int currentHealth;
     private bool canTakeDamage = true;
     private Flash flash;
     private Animator myAnimator;
@@ -19,6 +20,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     protected override void Awake()
     {
         base.Awake();
+        buttonManager = FindObjectOfType<ButtonManager>();
         myAnimator = GetComponent<Animator>();
         flash = GetComponent<Flash>();
     }
@@ -43,6 +45,8 @@ public class PlayerHealth : Singleton<PlayerHealth>
     }
     public void DestroyPlaeyer()
     {
+        buttonManager.deathCanvas.gameObject.SetActive(true);
+        buttonManager.textMeshPro.text = "Score:" + ScoreManager.Instance.DisplayScore();
         Destroy(gameObject);
     }
     public void TakeDamage(int damageAmount)

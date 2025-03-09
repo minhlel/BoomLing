@@ -216,6 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 20
+  socre: 10
 --- !u!114 &7796258150057720346
 MonoBehaviour:
   m_ObjectHideFlags: 0
