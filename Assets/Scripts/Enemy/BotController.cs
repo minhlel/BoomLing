@@ -14,7 +14,7 @@ public class BotController : MonoBehaviour
     [SerializeField] private float bulletSpeed = 10f; // Tốc độ của đạn
     [SerializeField] private float bombForce = 5f;    // Lực ném bom
     [SerializeField] private float actionInterval = 2f; // Thời gian giữa các hành động
-    [SerializeField] private float switchActionTime = 5f; // Thời gian chuyển đổi hành động
+    // [SerializeField] private float switchActionTime = 5f; // Thời gian chuyển đổi hành động
 
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 2f;    // Tốc độ di chuyển của bot
@@ -26,8 +26,8 @@ public class BotController : MonoBehaviour
     [Header("Rotate Settings")]
     [SerializeField] private float rotateChance = 0.5f;
 
-    private float actionTimer = 0f;                  // Bộ đếm thời gian cho hành động
-    private bool isShooting = true;                  // Trạng thái hành động hiện tại (bắn hoặc ném)
+    // private float actionTimer = 0f;                  // Bộ đếm thời gian cho hành động
+    // private bool isShooting = true;                  // Trạng thái hành động hiện tại (bắn hoặc ném)
     private Transform bossPosition;
     private void Start()
     {

@@ -13,7 +13,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     private ButtonManager buttonManager;
     private Slider healthSlider;
     public int currentHealth;
-    private bool canTakeDamage = true;
+    //private bool canTakeDamage = true;
     private Flash flash;
     private Animator myAnimator;
 
@@ -66,7 +66,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     }
     public void TakeDamage(int damageAmount)
     {
-        canTakeDamage = false;
+        //canTakeDamage = false;
         currentHealth -= damageAmount;
         Debug.Log(currentHealth);
         UpdateHealthSlider();
@@ -86,7 +86,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     private IEnumerator DamageRecoveryRoutine()
     {
         yield return new WaitForSeconds(damageRecoveryTime);
-        canTakeDamage = true;
+        //canTakeDamage = true;
     }
     public void UpdateHealthSlider()
     {
