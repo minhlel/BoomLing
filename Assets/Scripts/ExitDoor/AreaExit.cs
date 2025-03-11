@@ -8,13 +8,17 @@ public class AreaExit : MonoBehaviour
     [SerializeField] private string sceneToLoad;
     [SerializeField] private string sceneTransitionName;
 
-private void OnTriggerEnter2D(Collider2D other)
-{
-    if (other.gameObject.GetComponent<PlayerController>())
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        SceneManagement.Instance.SetTransitionName(sceneTransitionName);
-        SceneManager.LoadScene(sceneToLoad);
+        if (other.gameObject.GetComponent<PlayerController>())
+        {
+            if (PlayerHealth.Instance != null)
+            {
+                SceneManagement.Instance.SetPlayerHealth(PlayerHealth.Instance.currentHealth);
+            }
+            SceneManagement.Instance.SetTransitionName(sceneTransitionName);
+            SceneManager.LoadScene(sceneToLoad);
+        }
     }
-}
 
 }

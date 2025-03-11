@@ -30,14 +30,21 @@ public class PlayerHealth : Singleton<PlayerHealth>
         }
         myAnimator = GetComponent<Animator>();
         flash = GetComponent<Flash>();
+        if (SceneManagement.Instance != null && SceneManagement.Instance.PlayerHealth > 0)
+        {
+            currentHealth = SceneManagement.Instance.PlayerHealth;
+            UpdateHealthSlider();
+        }
     }
-
+    public void Update()
+    {
+        UpdateHealthSlider();
+    }
     private void Start()
     {
         currentHealth = maxHealth;
         UpdateHealthSlider();
     }
-
     public void DetectDeath()
     {
         if (currentHealth <= 0)
