@@ -68,16 +68,7 @@ public class PlayerController : Singleton<PlayerController>
         rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
     }
 
-    // private void AdjustPlayerFacingDirection() {
-    //     Vector3 mousePos = Input.mousePosition;
-    //     Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
 
-    //     if (mousePos.x < playerScreenPoint.x) {
-    //         mySpriteRender.flipX = true;
-    //     } else {
-    //         mySpriteRender.flipX = false;
-    //     }
-    // }
 
     public bool IsFacingLeft { get; private set; } // Biến công khai để kiểm tra hướng nhân vật
 
