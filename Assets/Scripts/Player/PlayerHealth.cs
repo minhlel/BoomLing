@@ -10,7 +10,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     [SerializeField] public int maxHealth = 3;
     [SerializeField] private float damageRecoveryTime = 1f;
 
-    [SerializeField] private ButtonManager buttonManager;
+    private ButtonManager buttonManager;
     private Slider healthSlider;
     public int currentHealth;
     private bool canTakeDamage = true;
@@ -20,7 +20,14 @@ public class PlayerHealth : Singleton<PlayerHealth>
     protected override void Awake()
     {
         base.Awake();
-        buttonManager = FindObjectOfType<ButtonManager>();
+        if (FindObjectsOfType<ButtonManager>().Length > 1)
+        {
+            Destroy(gameObject); // Xóa bản sao dư thừa nếu đã có một ButtonManager tồn tại
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject); // Đối tượng không bị hủy khi chuyển scene
+        }
         myAnimator = GetComponent<Animator>();
         flash = GetComponent<Flash>();
     }
@@ -45,6 +52,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     }
     public void DestroyPlaeyer()
     {
+        buttonManager = FindObjectOfType<ButtonManager>();
         buttonManager.deathCanvas.gameObject.SetActive(true);
         buttonManager.textMeshPro.text = "Score:" + ScoreManager.Instance.DisplayScore();
         Destroy(gameObject);
@@ -73,7 +81,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
         yield return new WaitForSeconds(damageRecoveryTime);
         canTakeDamage = true;
     }
-    private void UpdateHealthSlider()
+    public void UpdateHealthSlider()
     {
         if (healthSlider == null)
         {
