@@ -68,7 +68,6 @@ public class PlayerHealth : Singleton<PlayerHealth>
     {
         //canTakeDamage = false;
         currentHealth -= damageAmount;
-        Debug.Log(currentHealth);
         UpdateHealthSlider();
         StartCoroutine(flash.FlashRoutine());
         StartCoroutine(DamageRecoveryRoutine());

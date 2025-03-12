@@ -128,7 +128,7 @@ public class BotController : MonoBehaviour
 private void ShootBullet()
 {
     int bulletCount = 4; // Số lượng viên đạn
-    float spreadAngle = 15f; // Góc lệch giữa các viên đạn (độ)
+    float spreadAngle = 30f; // Góc lệch giữa các viên đạn (độ)
     float angleStep = spreadAngle / (bulletCount - 1); // Khoảng cách giữa các góc
     float startAngle = -spreadAngle / 2; // Góc bắt đầu bắn
 
