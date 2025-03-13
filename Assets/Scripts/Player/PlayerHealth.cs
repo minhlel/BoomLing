@@ -16,6 +16,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     //private bool canTakeDamage = true;
     private Flash flash;
     private Animator myAnimator;
+    public bool checkHeath = true;
 
     protected override void Awake()
     {
@@ -39,6 +40,12 @@ public class PlayerHealth : Singleton<PlayerHealth>
     public void Update()
     {
         UpdateHealthSlider();
+        if (currentHealth <= 0)
+        {
+            checkHeath = false;
+        }else{
+            checkHeath = true;
+        }
     }
     private void Start()
     {

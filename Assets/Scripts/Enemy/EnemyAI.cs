@@ -24,6 +24,7 @@ public class EnemyAI : MonoBehaviour
     private Transform playerTransform;
     private float roamingTimer;
     private Animator myAnimator;
+    private EnemyHealth enemyHealth;
 
     private void Awake()
     {
@@ -60,19 +61,19 @@ public class EnemyAI : MonoBehaviour
 
     private void HandleRoaming()
     {
-        // Giảm thời gian đếm ngược
-        roamingTimer -= Time.deltaTime;
-
-        if (roamingTimer <= 0f)
-        {
-            // Tạo vị trí mới và di chuyển đến đó
-            Vector2 roamPosition = GetRoamingPosition();
-            enemyPathfinding.MoveTo(roamPosition);
-            // Reset bộ đếm thời gian
-            roamingTimer = roamingInterval;
-            // Kiểm tra xem Player có ở gần không
-            DetectPlayer();
-        }
+        enemyHealth = gameObject.GetComponent<EnemyHealth>();
+            // Giảm thời gian đếm ngược
+            roamingTimer -= Time.deltaTime;
+            if (roamingTimer <= 0f)
+            {
+                // Tạo vị trí mới và di chuyển đến đó
+                Vector2 roamPosition = GetRoamingPosition();
+                enemyPathfinding.MoveTo(roamPosition);
+                // Reset bộ đếm thời gian
+                roamingTimer = roamingInterval;
+                // Kiểm tra xem Player có ở gần không
+                DetectPlayer();
+            }
     }
 
     private Vector2 GetRoamingPosition()

@@ -19,9 +19,12 @@ public class ActiveWeapon : MonoBehaviour
     void Update()
     {
         //MouseFollowWithOffset();
-        HandleShooting();
+        if (PlayerHealth.Instance != null && PlayerHealth.Instance.checkHeath)
+        {
+            HandleShooting();
+        }
     }
-       private void MouseFollowWithOffset()
+    private void MouseFollowWithOffset()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 direction = mousePos - playerController.transform.position; // Hướng từ player đến chuột
@@ -60,36 +63,36 @@ public class ActiveWeapon : MonoBehaviour
     //     Destroy(bullet, 2f);
     // }
 
-private void Shoot()
-{
-    // Tính vị trí chuột trong không gian thế giới
-    Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    mousePos.z = 0; // Đặt z = 0 vì game 2D chỉ cần trục x, y
-    AudioManager.Instance.PlaySFX(AudioManager.Instance.gunPlayer);
-    // Tính hướng từ firePoint đến vị trí chuột
-    Vector3 direction = (mousePos - firePoint.position).normalized;
-
-    // Kiểm tra nếu chuột ở bên trái người chơi
-    Vector3 spawnPosition = firePoint.position;
-    if (mousePos.x < playerController.transform.position.x)
+    private void Shoot()
     {
-        // Đổi vị trí x của firePoint sang đối xứng
-        spawnPosition.x = playerController.transform.position.x - (firePoint.position.x - playerController.transform.position.x);
+        // Tính vị trí chuột trong không gian thế giới
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0; // Đặt z = 0 vì game 2D chỉ cần trục x, y
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.gunPlayer);
+        // Tính hướng từ firePoint đến vị trí chuột
+        Vector3 direction = (mousePos - firePoint.position).normalized;
+
+        // Kiểm tra nếu chuột ở bên trái người chơi
+        Vector3 spawnPosition = firePoint.position;
+        if (mousePos.x < playerController.transform.position.x)
+        {
+            // Đổi vị trí x của firePoint sang đối xứng
+            spawnPosition.x = playerController.transform.position.x - (firePoint.position.x - playerController.transform.position.x);
+        }
+
+        // Tạo viên đạn từ vị trí đã điều chỉnh
+        GameObject bullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
+
+        // Lấy Rigidbody2D của viên đạn và gắn vận tốc
+        Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
+        if (bulletRb != null)
+        {
+            bulletRb.velocity = direction * bulletSpeed;
+        }
+
+        // Huỷ viên đạn sau 2 giây để tránh rác bộ nhớ
+        Destroy(bullet, 2f);
     }
-
-    // Tạo viên đạn từ vị trí đã điều chỉnh
-    GameObject bullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
-
-    // Lấy Rigidbody2D của viên đạn và gắn vận tốc
-    Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
-    if (bulletRb != null)
-    {
-        bulletRb.velocity = direction * bulletSpeed;
-    }
-
-    // Huỷ viên đạn sau 2 giây để tránh rác bộ nhớ
-    Destroy(bullet, 2f);
-}
 
 
 }

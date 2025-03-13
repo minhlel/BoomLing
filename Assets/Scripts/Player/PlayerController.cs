@@ -27,7 +27,7 @@ public class PlayerController : Singleton<PlayerController>
     {
         playerControls.Enable();
     }
-    private void OnDisable()
+    public void OnDisable()
     {
         if (playerControls != null)
         {
@@ -45,11 +45,14 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Update()
     {
-        PlayerInput();
+        if (PlayerHealth.Instance != null && PlayerHealth.Instance.checkHeath)
+        {
+            PlayerInput();
+        }
     }
 
     private void FixedUpdate()
-    { 
+    {
         AdjustPlayerFacingDirection();
         Move();
     }
@@ -58,7 +61,7 @@ public class PlayerController : Singleton<PlayerController>
     {
         movement = playerControls.Movement.Move.ReadValue<Vector2>();
         bool isShooting = Input.GetMouseButton(0); // Nhấn chuột trái để bắn
-        myAnimator.SetBool("shoot", isShooting ? true : false); 
+        myAnimator.SetBool("shoot", isShooting ? true : false);
         myAnimator.SetFloat("moveX", movement.x);
         myAnimator.SetFloat("moveY", movement.y);
     }
