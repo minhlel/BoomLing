@@ -67,6 +67,14 @@ public class PlayerController : Singleton<PlayerController>
     {
         rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
     }
+    public void TakeDamge()
+    {
+        Die();
+    }
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
 
 
 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6946712957b338642add28bfc867fd12
+guid: 19496c58061b6a147a0d1a187dd9ce89
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 6
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,34 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SMS_Soldier_WALK_EAST_strip4_0
+      name: Walk_East_4_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 0
-        width: 8
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04cfb1f7b0de2d34fb079c85e82b7cc8
-      internalID: 1843275966
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SMS_Soldier_WALK_EAST_strip4_1
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 0
+        x: 6
+        y: 1
         width: 11
-        height: 24
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,50 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35fa60b3e33a5694c802cda4d6b7d36f
-      internalID: 1653562696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SMS_Soldier_WALK_EAST_strip4_2
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 0
-        width: 8
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6571111b91872f84e8b2e56d1c5188f6
-      internalID: -886270512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SMS_Soldier_WALK_EAST_strip4_3
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 0
-        width: 11
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b06ab3ac2af088a4eb2a5ef37424eb0e
-      internalID: 1874413388
+      spriteID: 4a39c5a9b647a7d40bbf2ee86642f7bd
+      internalID: -554683967
       vertices: []
       indices: 
       edges: []
@@ -191,10 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SMS_Soldier_WALK_EAST_strip4_0: 1843275966
-      SMS_Soldier_WALK_EAST_strip4_1: 1653562696
-      SMS_Soldier_WALK_EAST_strip4_2: -886270512
-      SMS_Soldier_WALK_EAST_strip4_3: 1874413388
+      Walk_East_4_0: -554683967
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

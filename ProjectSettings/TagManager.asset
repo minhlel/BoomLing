@@ -8,6 +8,9 @@ TagManager:
   - Boss
   - Wall
   - Enemy
+  - Duc_Enemy
+  - Energry
+  - Explosion
   layers:
   - Default
   - TransparentFX
@@ -68,4 +71,7 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 108579309
+    locked: 0
+  - name: Energry
+    uniqueID: 466652447
     locked: 0

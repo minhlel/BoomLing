@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6946712957b338642add28bfc867fd12
+guid: 362e927e721d1154a81f73a96b263ecd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 18
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SMS_Soldier_WALK_EAST_strip4_0
+      name: Energy_0
       rect:
         serializedVersion: 2
-        x: 4
+        x: 0
         y: 0
         width: 8
-        height: 24
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,41 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04cfb1f7b0de2d34fb079c85e82b7cc8
-      internalID: 1843275966
+      spriteID: eb7e42ecaae9cab43a9381cc707fa289
+      internalID: 1037245108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SMS_Soldier_WALK_EAST_strip4_1
+      name: Energy_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 0
-        width: 11
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35fa60b3e33a5694c802cda4d6b7d36f
-      internalID: 1653562696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SMS_Soldier_WALK_EAST_strip4_2
-      rect:
-        serializedVersion: 2
-        x: 36
+        x: 8
         y: 0
         width: 8
-        height: 24
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6571111b91872f84e8b2e56d1c5188f6
-      internalID: -886270512
+      spriteID: 90551e903e77e354686502c141579ca5
+      internalID: 1997155756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SMS_Soldier_WALK_EAST_strip4_3
+      name: Energy_2
       rect:
         serializedVersion: 2
-        x: 50
+        x: 16
         y: 0
-        width: 11
-        height: 24
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,8 +153,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b06ab3ac2af088a4eb2a5ef37424eb0e
-      internalID: 1874413388
+      spriteID: a4ed260b297b5ea4089135aaf743b96f
+      internalID: -303793873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Energy_3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d1d4a9ec24ece4ba2c95e76a212548
+      internalID: 678476102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Energy_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f53f264aebfab6449bb64235cceafaa
+      internalID: -1273883594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Energy_5
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342a2240c07f04c4b84fb3f467b791bc
+      internalID: 723844322
       vertices: []
       indices: 
       edges: []
@@ -191,10 +233,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SMS_Soldier_WALK_EAST_strip4_0: 1843275966
-      SMS_Soldier_WALK_EAST_strip4_1: 1653562696
-      SMS_Soldier_WALK_EAST_strip4_2: -886270512
-      SMS_Soldier_WALK_EAST_strip4_3: 1874413388
+      Energy_0: 1037245108
+      Energy_1: 1997155756
+      Energy_2: -303793873
+      Energy_3: 678476102
+      Energy_4: -1273883594
+      Energy_5: 723844322
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

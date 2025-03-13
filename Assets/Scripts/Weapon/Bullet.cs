@@ -6,6 +6,9 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private GameObject explosionEffect; // Hiệu ứng nổ
     [SerializeField] private int damageAmount = 1;
+    [SerializeField] private float damage = 10f;
+
+   
     private void OnTriggerEnter2D(Collider2D collider2D)
     {
         // Kiểm tra va chạm với enemy hoặc wall
@@ -26,5 +29,19 @@ public class Bullet : MonoBehaviour
         }
         // Huỷ viên đạn
         Destroy(gameObject);
+        if (collider2D.CompareTag("Duc_Enemy"))
+        {
+            duc_eneemy eneemy = collider2D.GetComponent<duc_eneemy>();
+            if( eneemy != null)
+            {
+                eneemy.TakeDamge(damage);
+            }
+            Destroy(gameObject);
+        }
+        
     }
+   
+
+     
+    
 }
