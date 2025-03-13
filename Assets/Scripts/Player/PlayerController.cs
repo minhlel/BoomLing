@@ -13,6 +13,7 @@ public class PlayerController : Singleton<PlayerController>
     private SpriteRenderer mySpriteRender;
 
 
+
     protected override void Awake()
     {
         base.Awake();
@@ -48,7 +49,7 @@ public class PlayerController : Singleton<PlayerController>
     }
 
     private void FixedUpdate()
-    {
+    { 
         AdjustPlayerFacingDirection();
         Move();
     }

@@ -225,8 +225,8 @@ MonoBehaviour:
   actionInterval: 0.7
   switchActionTime: 0.000001
   moveSpeed: 2
-  moveAreaMin: {x: 2, y: -9}
-  moveAreaMax: {x: 14, y: -3}
+  moveAreaMin: {x: 37.2, y: -26.6}
+  moveAreaMax: {x: 58.2, y: -15.8}
   rotateChance: 0
 --- !u!114 &6321387254321750572
 MonoBehaviour:
@@ -255,3 +255,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 200
+  socre: 100

@@ -18,6 +18,19 @@ public class Bullet : MonoBehaviour
                 enemyHealth.TakeDamage(damageAmount);
             }
         }
+
+        else if ( collider2D.gameObject.CompareTag("ThanhEnemy"))
+        {
+            Instantiate(explosionEffect, transform.position, Quaternion.identity);  
+            Enemy thanhEnemy = collider2D.GetComponent<Enemy>();
+            if (thanhEnemy != null)
+            {
+                thanhEnemy.TakeDamage(damageAmount);
+            }
+            Destroy(gameObject);
+
+        }
+
         else if (collider2D.gameObject.CompareTag("Wall"))
         {
             // Tạo hiệu ứng nổ khi đạn va vào tường

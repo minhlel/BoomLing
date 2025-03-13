@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int startingHealth = 3;
+    [SerializeField] private float socre = 10;
     //[SerializeField] private HealthBar healthBar;
 
     private int currentHealth;
@@ -33,11 +34,13 @@ public class EnemyHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            ScoreManager.Instance.Score(socre);
             myAnimator.SetBool("Death", true);
             AudioManager.Instance.PlaySFX(AudioManager.Instance.deathEnemy);
         }
     }
-    public void DestroyBot(){
+    public void DestroyBot()
+    {
         Destroy(gameObject);
     }
 
