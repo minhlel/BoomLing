@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Explosion : MonoBehaviour
+public class Explosionss : MonoBehaviour
 {
     [SerializeField] private int damage = 25;
     private void OnTriggerEnter2D(Collider2D collider2D)
