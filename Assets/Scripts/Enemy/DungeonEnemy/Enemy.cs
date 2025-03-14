@@ -2,31 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Enemy : MonoBehaviour
 {
-   [SerializeField] protected int enemyMoveSpeed = 1;
-   [SerializeField] protected int maxEnemyHp = 100;
-   [SerializeField] private float moveDistance = 10f;
-   protected int currentEnemyHp;
-   [SerializeField] protected int enterDamage = 3;
-   [SerializeField] protected int stayDamage = 1;
-   protected PlayerController player;
-   protected PlayerHealth playerHealth;
-   // Variables for random movement
+    [SerializeField] protected int enemyMoveSpeed = 1;
+    [SerializeField] protected int maxEnemyHp = 100;
+    [SerializeField] private float moveDistance = 10f;
+    protected int currentEnemyHp;
+    [SerializeField] protected int enterDamage = 3;
+    [SerializeField] protected int stayDamage = 1;
+    protected PlayerController player;
+    protected PlayerHealth playerHealth;
+    // Variables for random movement
     private Vector2 randomTarget;
     private float changeDirectionTimer;
     [SerializeField] private float changeDirectionInterval = 2f; // How often to pick new direction
     [SerializeField] protected EnemyAudio enemyAudio;
-   protected virtual void Start()
-   {
+    [SerializeField] private int socre = 10;
+    protected virtual void Start()
+    {
         player = FindAnyObjectByType<PlayerController>();
         playerHealth = FindAnyObjectByType<PlayerHealth>();
         currentEnemyHp = maxEnemyHp;
         PickNewRandomTarget(); // Set initial random target
-   }
-   protected virtual void Update()
-   {
+    }
+    protected virtual void Update()
+    {
         if (player != null)
         {
             float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
@@ -43,13 +45,13 @@ public class Enemy : MonoBehaviour
         {
             Patrol(); // If no player exists, keep patrolling
         }
-   }
-   protected void MoveToPlayer()
-   {
+    }
+    protected void MoveToPlayer()
+    {
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemyMoveSpeed * Time.deltaTime);
         FlipEnemy();
-   }
-   protected void Patrol()
+    }
+    protected void Patrol()
     {
         // Move towards random target
         transform.position = Vector2.MoveTowards(transform.position, randomTarget, enemyMoveSpeed * Time.deltaTime);
@@ -64,7 +66,7 @@ public class Enemy : MonoBehaviour
 
         // Optional: Flip based on movement direction
         FlipEnemyBasedOnMovement();
-     //     Debug.LogError("Patrol");
+        //     Debug.LogError("Patrol");
 
     }
     protected void PickNewRandomTarget()
@@ -73,14 +75,14 @@ public class Enemy : MonoBehaviour
         float patrolRadius = 5f; // Adjust this value to control patrol range
         randomTarget = (Vector2)transform.position + Random.insideUnitCircle * patrolRadius;
     }
-   protected void FlipEnemy()
-   {
+    protected void FlipEnemy()
+    {
         if (player != null)
         {
-            transform.localScale = new Vector3(player.transform.position.x < transform.position.x ? -1 : 1,1,1); 
+            transform.localScale = new Vector3(player.transform.position.x < transform.position.x ? -1 : 1, 1, 1);
         }
-   }
-   protected void FlipEnemyBasedOnMovement()
+    }
+    protected void FlipEnemyBasedOnMovement()
     {
         // Flip based on movement direction
         Vector2 movementDirection = randomTarget - (Vector2)transform.position;
@@ -89,19 +91,20 @@ public class Enemy : MonoBehaviour
             transform.localScale = new Vector3(movementDirection.x < 0 ? -1 : 1, 1, 1);
         }
     }
-   public virtual void TakeDamage(int damageAmount)
-   {
+    public virtual void TakeDamage(int damageAmount)
+    {
         currentEnemyHp -= damageAmount;
         currentEnemyHp = Mathf.Max(currentEnemyHp, 0);
-        if(currentEnemyHp <= 0) 
+        if (currentEnemyHp <= 0)
         {
-          Die();
+            Die();
         }
-   }
-   protected virtual void Die()
-   {
+    }
+    protected virtual void Die()
+    {
+        ScoreManager.Instance.Score(socre);
         enemyAudio.PlayEnemyDeathSound();
         Destroy(gameObject);
 
-   }
+    }
 }

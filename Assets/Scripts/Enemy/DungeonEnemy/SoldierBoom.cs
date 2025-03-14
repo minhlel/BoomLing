@@ -36,7 +36,7 @@ public class SoldierBoom : Enemy
        if (collision.CompareTag("Player"))
         {
             CreateExplosion();
-            // Die();
+            Die();
         }
     }
 }
