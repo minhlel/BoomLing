@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int startingHealth = 3;
     [SerializeField] private float socre = 10;
+    private AudioManager SFX;
     //[SerializeField] private HealthBar healthBar;
 
     private int currentHealth;
@@ -15,6 +16,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void Awake()
     {
+        SFX = FindObjectOfType<AudioManager>();
         myAnimator = GetComponent<Animator>();
         flash = GetComponent<Flash>();
     }
@@ -36,7 +38,8 @@ public class EnemyHealth : MonoBehaviour
         {
             ScoreManager.Instance.Score(socre);
             myAnimator.SetBool("Death", true);
-            AudioManager.Instance.PlaySFX(AudioManager.Instance.deathEnemy);
+            SFX.PlaySFX(SFX.deathEnemy);
+            //AudioManager.Instance.PlaySFX(AudioManager.Instance.deathEnemy);
         }
     }
     public void DestroyBot()

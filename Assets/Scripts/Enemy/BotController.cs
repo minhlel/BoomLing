@@ -29,16 +29,27 @@ public class BotController : MonoBehaviour
     // private float actionTimer = 0f;                  // Bộ đếm thời gian cho hành động
     // private bool isShooting = true;                  // Trạng thái hành động hiện tại (bắn hoặc ném)
     private Transform bossPosition;
+    private AudioManager SFX;
     private void Start()
     {
+        SFX = FindObjectOfType<AudioManager>();
         bossPosition = GetComponent<Transform>();
         // Lặp lại hành động ngẫu nhiên
         InvokeRepeating(nameof(RandomAction), actionInterval, actionInterval);
-
+        SFX.PlaySFX(SFX.gunEnemy);
         // Đặt hướng di chuyển ngẫu nhiên ban đầu
         moveDirection = GetRandomDirection();
     }
+    // private void Awake()
+    // {
+    //     SFX = FindObjectOfType<AudioManager>();
+    //     bossPosition = GetComponent<Transform>();
+    //     // Lặp lại hành động ngẫu nhiên
+    //     InvokeRepeating(nameof(RandomAction), actionInterval, actionInterval);
 
+    //     // Đặt hướng di chuyển ngẫu nhiên ban đầu
+    //     moveDirection = GetRandomDirection();
+    // }
     private void Update()
     {
         MoveBot();
@@ -69,7 +80,7 @@ public class BotController : MonoBehaviour
         // {
         //     ThrowBomb();
         // }
-        AudioManager.Instance.PlaySFX(AudioManager.Instance.gunEnemy);
+        //AudioManager.Instance.PlaySFX(AudioManager.Instance.gunEnemy);
         ShootBullet();
         ThrowBomb();
         // Ngẫu nhiên quay trái hoặc quay phải
@@ -125,29 +136,29 @@ public class BotController : MonoBehaviour
         }
     }
 
-private void ShootBullet()
-{
-    int bulletCount = 4; // Số lượng viên đạn
-    float spreadAngle = 30f; // Góc lệch giữa các viên đạn (độ)
-    float angleStep = spreadAngle / (bulletCount - 1); // Khoảng cách giữa các góc
-    float startAngle = -spreadAngle / 2; // Góc bắt đầu bắn
-
-    for (int i = 0; i < bulletCount; i++)
+    private void ShootBullet()
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        if (rb != null)
-        {
-            // Tính góc của viên đạn
-            float angle = startAngle + i * angleStep;
-            Vector2 direction = Quaternion.Euler(0, 0, angle) * (isFacingRight ? firePoint.right : -firePoint.right);
+        int bulletCount = 4; // Số lượng viên đạn
+        float spreadAngle = 30f; // Góc lệch giữa các viên đạn (độ)
+        float angleStep = spreadAngle / (bulletCount - 1); // Khoảng cách giữa các góc
+        float startAngle = -spreadAngle / 2; // Góc bắt đầu bắn
 
-            // Đặt vận tốc cho viên đạn
-            rb.velocity = direction * bulletSpeed;
+        for (int i = 0; i < bulletCount; i++)
+        {
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                // Tính góc của viên đạn
+                float angle = startAngle + i * angleStep;
+                Vector2 direction = Quaternion.Euler(0, 0, angle) * (isFacingRight ? firePoint.right : -firePoint.right);
+
+                // Đặt vận tốc cho viên đạn
+                rb.velocity = direction * bulletSpeed;
+            }
+            //Destroy(bullet, 2f);
         }
-        //Destroy(bullet, 2f);
     }
-}
     private void ThrowBomb()
     {
         GameObject bomb = Instantiate(bombPrefab, firePoint.position, firePoint.rotation);

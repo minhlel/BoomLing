@@ -17,6 +17,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     private Flash flash;
     private Animator myAnimator;
     public bool checkHeath = true;
+    private AudioManager SFX;
 
     protected override void Awake()
     {
@@ -29,6 +30,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
         {
             DontDestroyOnLoad(gameObject); // Đối tượng không bị hủy khi chuyển scene
         }
+        SFX = FindObjectOfType<AudioManager>();
         myAnimator = GetComponent<Animator>();
         flash = GetComponent<Flash>();
         if (SceneManagement.Instance != null && SceneManagement.Instance.PlayerHealth > 0)
@@ -59,7 +61,8 @@ public class PlayerHealth : Singleton<PlayerHealth>
             bool isDeath = CheckIfPlayerDeath();
             if (isDeath)
             {
-                AudioManager.Instance.PlaySFX(AudioManager.Instance.deathPlayer);
+                //AudioManager.Instance.PlaySFX(AudioManager.Instance.deathPlayer);
+                SFX.PlaySFX(SFX.deathPlayer);
                 myAnimator.SetBool("isDeath", isDeath ? true : false);
             }
         }

@@ -146,8 +146,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01209116, y: 0.016982496}
-  m_Size: {x: 0.5225458, y: 0.547598}
+  m_Offset: {x: 0.0042476654, y: 0.016982496}
+  m_Size: {x: 0.9147358, y: 0.9147358}
   m_Direction: 0
 --- !u!114 &3567053006064452281
 MonoBehaviour:
@@ -161,5 +161,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 567a1c06094d9564b8f4c8d5ffe78e68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionEffect: {fileID: 152291199243224806, guid: bae1de0ff86cdd840aa2f187ecc3e77e, type: 3}
+  explosionEffect: {fileID: 7281479988265858694, guid: cb7dc7d52513e9142b2914faa30fe550, type: 3}
   damageAmount: 15

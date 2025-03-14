@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ThanhLHH.unity
     guid: 86756879c84e3544ba779cca89e3fd76
+  - enabled: 1
+    path: Assets/Scenes/EndGame.unity
+    guid: 8170d33ab0c3bbe47b4236211881afaf
   m_configObjects: {}

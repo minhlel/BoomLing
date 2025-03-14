@@ -30,4 +30,11 @@ public class ButtonManager : MonoBehaviour
         deathCanvas.gameObject.SetActive(false);
         SceneManager.LoadScene(0);
     }
+   private void OnTriggerEnter2D(Collider2D collider2D)
+    {
+        if (collider2D.gameObject.CompareTag("Player"))
+        {
+             SceneManager.LoadScene(5);
+        }
+    }
 }
