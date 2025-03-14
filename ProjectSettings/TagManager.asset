@@ -11,6 +11,8 @@ TagManager:
   - Duc_Enemy
   - Energry
   - Explosion
+  - ThanhEnemy
+  - Bullet
   layers:
   - Default
   - TransparentFX

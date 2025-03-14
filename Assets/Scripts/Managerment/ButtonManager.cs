@@ -13,7 +13,7 @@ public class ButtonManager : MonoBehaviour
         if(PlayerHealth.Instance != null){
         PlayerHealth.Instance.currentHealth  = PlayerHealth.Instance.maxHealth;
         }
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(6);
     }
 
     public void quitGameButton()

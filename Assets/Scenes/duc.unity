@@ -20516,14 +20516,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 267870221474990284, guid: 2cec125bf52e65d4cadf0e8c2cc052ee, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 267870221474990284, guid: 2cec125bf52e65d4cadf0e8c2cc052ee, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1164501412496968594, guid: 2cec125bf52e65d4cadf0e8c2cc052ee, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -20605,9 +20597,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4357106360520239193, guid: 2cec125bf52e65d4cadf0e8c2cc052ee, type: 3}
-      propertyPath: m_RenderMode
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1925091756}
     - target: {fileID: 5342353572159905228, guid: 2cec125bf52e65d4cadf0e8c2cc052ee, type: 3}
       propertyPath: m_Name
       value: UICanvas
@@ -22113,7 +22105,7 @@ Transform:
   m_GameObject: {fileID: 1925091752}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.9467373, y: 9.86292, z: -9.908338}
+  m_LocalPosition: {x: -15.559999, y: 13.31, z: -9.908338}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

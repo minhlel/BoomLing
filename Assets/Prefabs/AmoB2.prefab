@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2185226532420441662}
   m_Layer: 0
   m_Name: AmoB2
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -255,6 +255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 152291199243224806, guid: bae1de0ff86cdd840aa2f187ecc3e77e, type: 3}
   damageAmount: 10
+  damage: 10
 --- !u!61 &2185226532420441662
 BoxCollider2D:
   m_ObjectHideFlags: 0
