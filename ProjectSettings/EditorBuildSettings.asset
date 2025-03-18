@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LeKhaiMinh.unity
     guid: 21bb1f1f21824cc40b3c80d669a5a895
+  - enabled: 1
+    path: Assets/Scenes/IntroScene.unity
+    guid: 8e70840e3bc3f854baf65ae82c572fac
   m_configObjects: {}
