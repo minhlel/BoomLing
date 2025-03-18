@@ -52,8 +52,10 @@ public class Pickup : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
+            if(PlayerHealth.Instance.currentHealth < 100){
             PlayerHealth.Instance.currentHealth += heath;
             PlayerHealth.Instance.UpdateHealthSlider();
+            }
             Destroy(gameObject);
         }
     }

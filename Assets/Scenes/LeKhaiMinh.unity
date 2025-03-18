@@ -12400,7 +12400,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346002351}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12423,7 +12423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1618014081}
   SFXSource: {fileID: 201093715}
-  background: {fileID: 8300000, guid: f2a0b4552a19e714e9482c26e60050de, type: 3}
+  background: {fileID: 8300000, guid: 9244848d20e65a649adc8730758d5d87, type: 3}
   deathEnemy: {fileID: 8300000, guid: a506f3fce5a401b49a213046395a4d5f, type: 3}
   gunPlayer: {fileID: 8300000, guid: 08325f08c8cbe554b946932e02a0dd34, type: 3}
   gunEnemy: {fileID: 8300000, guid: b2faf8923c0509845a5d56294cccf73f, type: 3}
@@ -12447,7 +12447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1371770113
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16651,7 +16651,7 @@ Transform:
   m_GameObject: {fileID: 5004279464076264571}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.9299998, y: -6.16, z: -9.908338}
+  m_LocalPosition: {x: 16.345999, y: -8.255639, z: -9.908338}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
