@@ -10,8 +10,9 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] public GameObject deathCanvas;
     public void playGameButton()
     {
-        if(PlayerHealth.Instance != null){
-        PlayerHealth.Instance.currentHealth  = PlayerHealth.Instance.maxHealth;
+        if (PlayerHealth.Instance != null)
+        {
+            PlayerHealth.Instance.currentHealth = PlayerHealth.Instance.maxHealth;
         }
         SceneManager.LoadScene(6);
     }
@@ -24,17 +25,24 @@ public class ButtonManager : MonoBehaviour
             Application.Quit();
         #endif
     }
-
+    public void skipTutorial()
+    {
+        if (PlayerHealth.Instance != null)
+        {
+            PlayerHealth.Instance.currentHealth = PlayerHealth.Instance.maxHealth;
+        }
+        SceneManager.LoadScene(1);
+    }
     public void quizToMenuButton()
     {
         deathCanvas.gameObject.SetActive(false);
         SceneManager.LoadScene(0);
     }
-   private void OnTriggerEnter2D(Collider2D collider2D)
+    private void OnTriggerEnter2D(Collider2D collider2D)
     {
         if (collider2D.gameObject.CompareTag("Player"))
         {
-             SceneManager.LoadScene(5);
+            SceneManager.LoadScene(5);
         }
     }
 }
