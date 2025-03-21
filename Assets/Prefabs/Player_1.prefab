@@ -126,7 +126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  deathCanvas: {fileID: 0}
 --- !u!50 &6364886403433237196
 Rigidbody2D:
   serializedVersion: 4
@@ -186,8 +185,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.10941219, y: 0.1024704}
-  m_Size: {x: 0.58203125, y: 1.4477177}
+  m_Offset: {x: -0.10941219, y: -0.030451536}
+  m_Size: {x: 0.58203125, y: 2.7060466}
   m_Direction: 0
 --- !u!114 &215879465948583645
 MonoBehaviour:
@@ -217,6 +216,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   damageRecoveryTime: 1
+  currentHealth: 0
+  checkHeath: 1
 --- !u!114 &6137266944260723570
 MonoBehaviour:
   m_ObjectHideFlags: 0

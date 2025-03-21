@@ -194,5 +194,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyMoveSpeed: 3
-  maxHp: 50
+  maxHp: 20
+  socre: 10
   explosionPrefabs: {fileID: 7281479988265858694, guid: cb7dc7d52513e9142b2914faa30fe550, type: 3}

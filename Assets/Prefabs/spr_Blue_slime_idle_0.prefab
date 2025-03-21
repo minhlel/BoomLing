@@ -113,7 +113,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 996926917, guid: 6ff28e6acdb2cc2448b3df218100348f, type: 3}
+  m_Sprite: {fileID: 1953314775, guid: 1937662204fc65f4f9b3e1232ac49982, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -163,9 +163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915eb6e9fe40c4348aa2b79e9cb1eec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 6
-  chaseSpeed: 4
-  attackRange: 3
+  detectionRange: 5
+  chaseSpeed: 7.5
+  attackRange: 2
   roamingInterval: 2
   rb: {fileID: 8095754238237089726}
   damageAmount: 10
@@ -267,7 +267,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.36, y: 2.8}
+    oldSize: {x: 1.0909091, y: 3}
     newSize: {x: 4, y: 4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -327,6 +327,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14042854, y: 0.38340732}
-  m_Size: {x: 0.48534584, y: 2.033185}
+  m_Offset: {x: -0.14042854, y: -0.060034037}
+  m_Size: {x: 0.48534584, y: 2.9200678}
   m_Direction: 0

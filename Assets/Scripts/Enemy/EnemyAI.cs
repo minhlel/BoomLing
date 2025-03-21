@@ -43,16 +43,19 @@ public class EnemyAI : MonoBehaviour
             {
                 case State.Roaming:
                     myAnimator.SetBool("Attack", false);
+                    myAnimator.SetBool("Chasing", false);
                     HandleRoaming();
                     break;
 
                 case State.Chasing:
                     myAnimator.SetBool("Attack", false);
+                    myAnimator.SetBool("Chasing", true);
                     ChasePlayer();
                     break;
 
                 case State.Attacking:
                     myAnimator.SetBool("Attack", true);
+                    myAnimator.SetBool("Chasing", false);
                     AttackPlayer();
                     break;
             }
@@ -62,18 +65,19 @@ public class EnemyAI : MonoBehaviour
     private void HandleRoaming()
     {
         enemyHealth = gameObject.GetComponent<EnemyHealth>();
-            // Giảm thời gian đếm ngược
-            roamingTimer -= Time.deltaTime;
-            if (roamingTimer <= 0f)
-            {
-                // Tạo vị trí mới và di chuyển đến đó
-                Vector2 roamPosition = GetRoamingPosition();
-                enemyPathfinding.MoveTo(roamPosition);
-                // Reset bộ đếm thời gian
-                roamingTimer = roamingInterval;
-                // Kiểm tra xem Player có ở gần không
-                DetectPlayer();
-            }
+        // Giảm thời gian đếm ngược
+        roamingTimer -= Time.deltaTime;
+        if (roamingTimer <= 0f)
+        {
+            // Tạo vị trí mới và di chuyển đến đó
+            Vector2 roamPosition = GetRoamingPosition();
+            enemyPathfinding.MoveTo(roamPosition);
+            UpdateFacingDirection(roamPosition);
+            // Reset bộ đếm thời gian
+            roamingTimer = roamingInterval;
+            // Kiểm tra xem Player có ở gần không
+            DetectPlayer();
+        }
     }
 
     private Vector2 GetRoamingPosition()
@@ -108,17 +112,21 @@ public class EnemyAI : MonoBehaviour
             Vector2 direction = (playerTransform.position - transform.position).normalized;
             enemyPathfinding.moveSpeed = chaseSpeed;
             enemyPathfinding.MoveTo(direction);
-            if (direction.x > 0)
-            {
-                transform.localScale = new Vector3(1, 1, 1);
-            }
-            else
-            {
-                transform.localScale = new Vector3(-1, 1, 1);
-            }
+            UpdateFacingDirection(direction);
         }
     }
-
+    private void UpdateFacingDirection(Vector2 direction)
+    {
+        if (direction.x > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if (direction.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        // If direction.x is 0, maintain current facing direction
+    }
     private void AttackPlayer()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
@@ -128,7 +136,8 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-
+            Vector2 directionToPlayer = (playerTransform.position - transform.position).normalized;
+            UpdateFacingDirection(directionToPlayer);
         }
     }
 

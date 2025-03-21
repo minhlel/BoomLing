@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5863072551372235137}
   - component: {fileID: 3912222895654100628}
-  - component: {fileID: 5170945778078961850}
+  - component: {fileID: 5356937673003865530}
   m_Layer: 0
   m_Name: Bush
   m_TagString: Untagged
@@ -85,8 +85,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &5170945778078961850
-CapsuleCollider2D:
+--- !u!58 &5356937673003865530
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,6 +117,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.20074284}
-  m_Size: {x: 1.6, y: 2.0014856}
-  m_Direction: 0
+  m_Offset: {x: -0.027204394, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.044839
