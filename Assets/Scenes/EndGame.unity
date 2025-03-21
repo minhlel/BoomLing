@@ -1435,7 +1435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 986373941}
   SFXSource: {fileID: 2099361246}
-  background: {fileID: 8300000, guid: 4dccdfe180569ae44880b88e7ae854bc, type: 3}
+  background: {fileID: 8300000, guid: bd7af3261063c8642a7aa37a06ea5846, type: 3}
   deathEnemy: {fileID: 8300000, guid: a506f3fce5a401b49a213046395a4d5f, type: 3}
   gunPlayer: {fileID: 8300000, guid: 08325f08c8cbe554b946932e02a0dd34, type: 3}
   gunEnemy: {fileID: 8300000, guid: b2faf8923c0509845a5d56294cccf73f, type: 3}
