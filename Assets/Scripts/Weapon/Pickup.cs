@@ -30,16 +30,16 @@ public class Pickup : MonoBehaviour
         if (PlayerController.Instance != null)
         {
             Vector3 playerPos = PlayerController.Instance.transform.position;
-        if (Vector3.Distance(transform.position, playerPos) < pickUpDistance)
-        {
-            moveDir = (playerPos - transform.position).normalized;
-            moveSpeed += accelartionRate;
-        }
-        else
-        {
-            moveDir = Vector3.zero;
-            moveSpeed = 0;
-        }
+            if (Vector3.Distance(transform.position, playerPos) < pickUpDistance)
+            {
+                moveDir = (playerPos - transform.position).normalized;
+                moveSpeed += accelartionRate;
+            }
+            else
+            {
+                moveDir = Vector3.zero;
+                moveSpeed = 0;
+            }
         }
     }
 
@@ -52,9 +52,10 @@ public class Pickup : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
-            if(PlayerHealth.Instance.currentHealth < 100){
-            PlayerHealth.Instance.currentHealth += heath;
-            PlayerHealth.Instance.UpdateHealthSlider();
+            if (PlayerHealth.Instance.currentHealth < PlayerHealth.Instance.maxHealth)
+            {
+                PlayerHealth.Instance.currentHealth += heath;
+                PlayerHealth.Instance.UpdateHealthSlider();
             }
             Destroy(gameObject);
         }

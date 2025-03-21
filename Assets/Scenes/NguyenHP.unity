@@ -42773,7 +42773,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 32
+      m_TileSpriteIndex: 34
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -42783,7 +42783,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 14
-      m_TileSpriteIndex: 31
+      m_TileSpriteIndex: 32
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -42793,7 +42793,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 15
-      m_TileSpriteIndex: 30
+      m_TileSpriteIndex: 31
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -42803,7 +42803,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 16
-      m_TileSpriteIndex: 19
+      m_TileSpriteIndex: 30
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -48716,8 +48716,8 @@ Tilemap:
     m_Data: {fileID: 1515983116, guid: 616b3aa7fb63c22478f4cacebb59857a, type: 3}
   - m_RefCount: 26
     m_Data: {fileID: 168019130, guid: 616b3aa7fb63c22478f4cacebb59857a, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 1295835506, guid: 616b3aa7fb63c22478f4cacebb59857a, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 32
     m_Data: {fileID: 821718200, guid: 616b3aa7fb63c22478f4cacebb59857a, type: 3}
   - m_RefCount: 30
@@ -48739,15 +48739,15 @@ Tilemap:
   - m_RefCount: 312
     m_Data: {fileID: -66237817, guid: 616b3aa7fb63c22478f4cacebb59857a, type: 3}
   - m_RefCount: 1
+    m_Data: {fileID: 1295835506, guid: 616b3aa7fb63c22478f4cacebb59857a, type: 3}
+  - m_RefCount: 1
     m_Data: {fileID: -1132771880, guid: 616b3aa7fb63c22478f4cacebb59857a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1705703964, guid: 616b3aa7fb63c22478f4cacebb59857a, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1593375354, guid: 616b3aa7fb63c22478f4cacebb59857a, type: 3}
   - m_RefCount: 14
     m_Data: {fileID: 1588903986, guid: 616b3aa7fb63c22478f4cacebb59857a, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -1593375354, guid: 616b3aa7fb63c22478f4cacebb59857a, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 1282
     m_Data:
@@ -50442,8 +50442,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.1900024, y: -3.5799866}
-  m_SizeDelta: {x: 683.28, y: 105.42}
+  m_AnchoredPosition: {x: 21.232971, y: -38.695007}
+  m_SizeDelta: {x: 239.63, y: 175.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &553282023982382117
 CanvasRenderer:
@@ -50578,8 +50578,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.1900244, y: -12.219987}
-  m_SizeDelta: {x: 783.28, y: 444.18}
+  m_AnchoredPosition: {x: 21.221, y: -38.694}
+  m_SizeDelta: {x: 1387.7, y: 961.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1092950577002443352
 RectTransform:
@@ -51038,8 +51038,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -0.8867, y: 2.6602}
+  m_SizeDelta: {x: 1148.0907, y: 786.313}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!81 &2575028833638076519
 AudioListener:
@@ -51744,7 +51744,7 @@ Canvas:
   m_GameObject: {fileID: 5342353571472554632}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 2604720643006370701}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -52595,7 +52595,7 @@ Transform:
   m_GameObject: {fileID: 5004279464076264571}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.3914043, y: 7.91374, z: -1.4481134}
+  m_LocalPosition: {x: -1.3996736, y: 7.9136105, z: -1.4481134}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
